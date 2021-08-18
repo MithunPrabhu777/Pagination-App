@@ -9,7 +9,7 @@
 .user {
   border: 2px solid black;
   border-radius: 10px;
-  background-color: #b3e3ff;
+  background-color: #d7f5fa;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,19 +31,19 @@
   padding: 10px;
   margin: 8px;
   border-radius: 5px;
-  border: 1px solid #2b2eff;
-  color: #2b2eff;
+  border: 1px solid #48d89c;
+  color: #34d47c;
   cursor: pointer;
 }
 
 .paginationBttns a:hover {
   color: white;
-  background-color: #2b2eff;
+  background-color: #31e977;
 }
 
 .paginationActive a {
   color: white;
-  background-color: #2b2eff;
+  background-color: #39c981;
 }
 
 .paginationDisabled a {
