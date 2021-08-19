@@ -20,17 +20,16 @@ function App() {
   },[]);
 
   const responseData = async() => {
-    const response =  await axios.get('https://reqres.in/api/users?page=2');
+    const response =  await axios.get(`https://reqres.in/api/users?page=${data?.page}`);
    console.log(response?.data);
     return response?.data;
   }
 
 const response1Data = async() => {
-  const response =  await axios.get('https://reqres.in/api/users?page=2');
+  const response =  await axios.get(`https://reqres.in/api/users?page=${data?.page}`);
  console.log(response?.data?.data.map((user) => user));
   return response?.data?.data.map((user) => user);
 }
-
 
   const pagesVisited = pageNumber * data?.per_page;
 
@@ -39,7 +38,7 @@ const response1Data = async() => {
     .map((user) => {
       return (
         <div className="user">
-          <img src={user?.avatar} style={{borderRadius:"50%"}}></img>
+          <img src={user?.avatar} style={{borderRadius:"50%",marginTop:"10px"}}></img>
           <h3>{user.first_name}</h3>
           <h3>{user.last_name}</h3>
           <h3>{user.email}</h3>
